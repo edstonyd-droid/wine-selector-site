@@ -1,0 +1,39 @@
+/* Public pages for Wine Selector (privacy policy, support). App palette from CLAUDE.md §5, dark first. */
+:root {
+  --bg: #121012;
+  --surface: #1c181b;
+  --text: #f2ede6;
+  --muted: #a59d97;
+  --line: #2e282c;
+  --wine: #8c1c2e;
+  --link: #e3a7b1;
+  --serif: "New York", ui-serif, "Iowan Old Style", Georgia, serif;
+  --sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", system-ui, sans-serif;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f7f3ee; --surface: #ede6de; --text: #1d191b; --muted: #6b625d; --line: #ddd5cb;
+    --link: #8c1c2e; color-scheme: light;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 1rem/1.6 var(--sans); }
+.page { max-width: 42rem; margin: 0 auto; padding: 1.5rem 16px 4rem; }
+header { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;
+         padding-bottom: 1rem; border-bottom: 1px solid var(--line); margin-bottom: 2rem; }
+.brand { font-family: var(--serif); font-size: 1.25rem; color: var(--text); text-decoration: none; }
+.brand::before { content: ""; display: inline-block; width: .55rem; height: .55rem; border-radius: 50%;
+                 background: var(--wine); margin-right: .5rem; vertical-align: .1rem; }
+nav a { font-size: .95rem; }
+a { color: var(--link); }
+h1, h2 { font-family: var(--serif); font-weight: 500; text-wrap: balance; }
+h1 { font-size: clamp(1.7rem, 5vw, 2.2rem); line-height: 1.2; margin: 0 0 .5rem; }
+h2 { font-size: 1.25rem; margin: 2rem 0 .5rem; }
+.meta { color: var(--muted); font-size: .9rem; margin-top: 0; }
+ul { padding-left: 1.2rem; }
+li { margin: .35rem 0; }
+article + article { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--line); }
+.sample { margin: 1rem 0 0; }
+.sample img { display: block; max-width: 100%; height: auto; border: 1px solid var(--line); border-radius: 6px; }
